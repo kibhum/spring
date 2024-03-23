@@ -8,32 +8,41 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import StarIcon from "@mui/icons-material/Star";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Grid from "@mui/material/Grid";
 
-const steps = [
+const programmes = [
   {
-    label: "Select campaign settings",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: "Computer Packages",
+    requirements: ["Open"],
+    duration: "1 month",
   },
   {
-    label: "Create an ad group",
-    description:
-      "An ad group contains one or more ads which target a shared set of keywords.",
+    label: "Information Communication Technology - (Certificate) KNEC",
+    requirements: ["KCSE D Plain & Above"],
+    duration: "1 year",
   },
   {
-    label: "Create an ad",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    label: "Information Communication Technology - (Diploma) KNEC",
+    requirements: ["KCSE C- or Pass in certificate in ICT"],
+    duration: "2 years",
+  },
+  {
+    label: "Secretariat studies stage i, ii, iii KNEC",
+    requirements: ["KCSE D- and Above"],
   },
 ];
 
 export default function Slider() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = steps.length;
+  const maxSteps = programmes.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -58,11 +67,65 @@ export default function Slider() {
         }}
       >
         <Typography sx={{ textAlign: "center", width: "100%" }}>
-          {steps[activeStep].label}
+          {programmes[activeStep].label}
         </Typography>
       </Paper>
       <Box sx={{ height: 255, width: "100%", p: 2 }}>
-        {steps[activeStep].description}
+        <Grid
+          container
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around",
+          }}
+        >
+          <Grid item>
+            <Typography
+              sx={{
+                textAlign: "center",
+                width: "100%",
+                mx: 2,
+                textTransform: "uppercase",
+                fontWeight: "bold",
+              }}
+            >
+              Requirements
+            </Typography>
+            {programmes[activeStep].requirements.map((requirement) => (
+              <List key={requirement}>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={requirement} />
+                </ListItem>
+              </List>
+            ))}
+          </Grid>
+          <Grid item>
+            <Typography
+              sx={{
+                textAlign: "center",
+                width: "100%",
+                mx: 2,
+                textTransform: "uppercase",
+                fontWeight: "bold",
+              }}
+            >
+              Requirements
+            </Typography>
+            {programmes[activeStep].requirements.map((requirement) => (
+              <List key={requirement}>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={requirement} />
+                </ListItem>
+              </List>
+            ))}
+          </Grid>
+        </Grid>
       </Box>
       <MobileStepper
         variant="text"
