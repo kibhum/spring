@@ -18,8 +18,10 @@ import InfoIcon from "@mui/icons-material/Info";
 import SchoolIcon from "@mui/icons-material/School";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import NavLink from "./components/NavLink";
+import { useTheme } from "@mui/material/styles";
 
 export default function Navigation() {
+  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -62,6 +64,7 @@ export default function Navigation() {
           top: 10,
           left: 10,
           zIndex: 99,
+          color: "white",
         }}
       >
         <MenuIcon />

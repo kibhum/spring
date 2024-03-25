@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Computer Packages",
+    "requirements": ["Open"],
+    "duration": "1 month",
+    "cost": "KSH 3000"
+  },
+  {
+    "label": "Information Communication Technology - (Certificate) KNEC",
+    "requirements": ["KCSE D Plain & Above"],
+    "duration": "1 year",
+    "cost": "KSH 10,000/TERM"
+  },
+  {
+    "label": "Information Communication Technology - (Diploma) KNEC",
+    "requirements": ["KCSE C- or Pass in certificate in ICT"],
+    "duration": "2 years",
+    "cost": "KSH 13,000/TERM"
+  },
+  {
+    "label": "Secretariat studies stage i, ii, iii KNEC",
+    "requirements": ["KCSE D- and Above"],
+    "duration": "2 years",
+    "cost": "KSH 10,000/TERM"
+  },
+  {
+    "label": "Human Resource certificate KNEC",
+    "requirements": ["KCSE D PLAIN and Above"],
+    "duration": "1 years",
+    "cost": "KSH 10,000/TERM"
+  },
+  {
+    "label": "Human Resource diploma KNEC",
+    "requirements": ["KCSE C- or Pass in certificate in ICT"],
+    "duration": "2 years",
+    "cost": "KSH 13,000/TERM"
+  },
+  {
+    "label": "Library and information studies certificate KNEC",
+    "requirements": ["KCSE D PLAIN and Above"],
+    "duration": "1 years",
+    "cost": "KSH 10,000/TERM"
+  },
+  {
+    "label": "Library and information studies diploma KNEC",
+    "requirements": ["KCSE C- or Pass in certificate in ICT"],
+    "duration": "2 years",
+    "cost": "KSH 13,000/TERM"
+  },
+  {
+    "label": "Accountancy certificate KNEC",
+    "requirements": ["KCSE D PLAIN and Above"],
+    "duration": "1 years",
+    "cost": "KSH 10,000/TERM"
+  },
+  {
+    "label": "Accountancy diploma KNEC",
+    "requirements": ["KCSE C- or Pass in certificate in ICT"],
+    "duration": "2 years",
+    "cost": "KSH 13,000/TERM"
+  }
+]

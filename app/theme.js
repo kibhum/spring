@@ -14,16 +14,16 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#FF5733",
-      // light: will be calculated from palette.primary.main,
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
+      main: "#FF37A6",
+      light: "#FFF7EF",
+      dark: "#A18683",
+      contrastText: "#FFF4E9",
     },
     secondary: {
-      main: "#E0C2FF",
-      light: "#F5EBFF",
-      // dark: will be calculated from palette.secondary.main,
-      contrastText: "#47008F",
+      main: "#FF69BC",
+      light: "#FFF5EB",
+      dark: "#927A77",
+      contrastText: "#FFF4E9",
     },
   },
   spacing: 4,

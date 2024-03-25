@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "./components/Slider";
 
-const Home = () => {
+const Programmes = () => {
   return (
     <React.Fragment>
-        <Slider />
+      <Slider />
     </React.Fragment>
   );
 };
 
-export default Home;
+export default Programmes;

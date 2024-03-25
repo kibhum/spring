@@ -16,28 +16,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
+import { getProgrammes } from "@/content/programmes/fetcher";
 
-const programmes = [
-  {
-    label: "Computer Packages",
-    requirements: ["Open"],
-    duration: "1 month",
-  },
-  {
-    label: "Information Communication Technology - (Certificate) KNEC",
-    requirements: ["KCSE D Plain & Above"],
-    duration: "1 year",
-  },
-  {
-    label: "Information Communication Technology - (Diploma) KNEC",
-    requirements: ["KCSE C- or Pass in certificate in ICT"],
-    duration: "2 years",
-  },
-  {
-    label: "Secretariat studies stage i, ii, iii KNEC",
-    requirements: ["KCSE D- and Above"],
-  },
-];
+const programmes = getProgrammes();
 
 export default function Slider() {
   const theme = useTheme();
@@ -53,30 +34,48 @@ export default function Slider() {
   };
 
   return (
-    <Box sx={{ width: "100%", flexGrow: 1, padding: 10 }} id="#programmes">
+    <Box sx={{ width: "100%", flexGrow: 1 }} id="#programmes">
       <Paper
         square
         elevation={1}
         sx={{
           display: "flex",
           alignItems: "center",
-          height: 50,
+          minHeight: 50,
           width: "100%",
           pl: 2,
-          bgcolor: "background.default",
+          bgcolor: theme.palette.primary.dark,
+          color: theme.palette.primary.contrastText,
         }}
       >
-        <Typography sx={{ textAlign: "center", width: "100%" }}>
+        <Typography
+          sx={{
+            textAlign: "center",
+            width: "100%",
+            textTransform: "uppercase",
+          }}
+        >
           {programmes[activeStep].label}
         </Typography>
+        <Typography sx={{ textAlign: "center", width: "100%" }}>
+          Cost: {programmes[activeStep].cost}
+        </Typography>
       </Paper>
-      <Box sx={{ height: 255, width: "100%", p: 2 }}>
+      <Box
+        sx={{
+          width: "100%",
+          p: 2,
+          bgcolor: theme.palette.secondary.main,
+          color: theme.palette.secondary.contrastText,
+        }}
+      >
         <Grid
           container
           sx={{
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-around",
+            p: 2,
           }}
         >
           <Grid item>
@@ -112,18 +111,16 @@ export default function Slider() {
                 fontWeight: "bold",
               }}
             >
-              Requirements
+              Duration
             </Typography>
-            {programmes[activeStep].requirements.map((requirement) => (
-              <List key={requirement}>
-                <ListItem>
-                  <ListItemIcon>
-                    <StarIcon />
-                  </ListItemIcon>
-                  <ListItemText inset primary={requirement} />
-                </ListItem>
-              </List>
-            ))}
+            <List key={programmes[activeStep].duration}>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon />
+                </ListItemIcon>
+                <ListItemText inset primary={programmes[activeStep].duration} />
+              </ListItem>
+            </List>
           </Grid>
         </Grid>
       </Box>
