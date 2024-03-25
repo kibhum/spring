@@ -4,7 +4,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import "./globals.css";
 import Navigation from "@/sections/Navigation";
-import Grid from "@mui/material/Grid";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <React.Fragment>
       <Home />
-      <Divider />
+      {/* <Divider /> */}
       <About />
     </React.Fragment>
   );

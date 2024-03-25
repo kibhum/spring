@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import MobileStepper from "@mui/material/MobileStepper";
@@ -19,11 +19,18 @@ import Grid from "@mui/material/Grid";
 import { getProgrammes } from "@/content/programmes/fetcher";
 
 const programmes = getProgrammes();
-
+const generalRequirements = [
+  "KCSE CERTIFICATE OR RESULTS SLIP COPY",
+  "COPY OF ID",
+  "PASSPORT PHOTO",
+  "BIRTH CERTIFICATE",
+];
 export default function Slider() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = programmes.length;
+  const requirements =
+    programmes[activeStep].requirements.concat(generalRequirements);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -65,8 +72,8 @@ export default function Slider() {
         sx={{
           width: "100%",
           p: 2,
-          bgcolor: theme.palette.secondary.main,
-          color: theme.palette.secondary.contrastText,
+          // bgcolor: theme.palette.secondary.main,
+          // color: theme.palette.secondary.contrastText,
         }}
       >
         <Grid
@@ -90,7 +97,7 @@ export default function Slider() {
             >
               Requirements
             </Typography>
-            {programmes[activeStep].requirements.map((requirement) => (
+            {requirements.map((requirement) => (
               <List key={requirement}>
                 <ListItem>
                   <ListItemIcon>

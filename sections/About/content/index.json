@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Reverend",
+    "path": "/Assets/gallery/pastor.jpg",
+    "description": "He was advising students on life matters and the importance of putting God first on their prayer day."
+  },
+  {
+    "title": "Board member",
+    "path": "/Assets/gallery/board.jpg",
+    "description": "She was guiding the students on the life choices and also the importance of working hard. This was during the prayer day."
+  },
+  {
+    "title": "Principal",
+    "path": "../Assets/gallery/principal.jpg",
+    "description": "Meet our principal. She has always advised the students in all aspects of life. She has always been there for them."
+  },
+  {
+    "title": "Students",
+    "path": "/Assets/gallery/students.jpg",
+    "description": "These are the pioneer students. This was during their prayer day as their student leader gave thanks to staff and the board members for having walked the journey together."
+  },
+  {
+    "title": "Teachers",
+    "path": "/Assets/gallery/teachers.jpg",
+    "description": "These are the teachers who have always been there for the students."
+  }
+]
