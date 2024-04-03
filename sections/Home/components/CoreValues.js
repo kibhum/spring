@@ -14,6 +14,7 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import Grid from "@mui/material/Grid";
 
 const coreValues = [
   "excellence",
@@ -27,41 +28,82 @@ export default function CoreValues() {
   const theme = useTheme();
 
   return (
-    <Box sx={{ width: "100%", flexGrow: 1 }} id="#programmes">
-      <Typography variant="h4" sx={{
+    <Box
+      sx={{
         width: "100%",
-        backgroundColor:theme.palette.primary.contrastText,
-        color: theme.palette.primary.dark,
-        
-        textAlign: "center",
-        p:2
-      }}>Core values </Typography>
-      <Paper
-        square
-        elevation={1}
+        p: 2,
+        backgroundColor: theme.palette.secondary.dark,
+        color: theme.palette.primary.main,
+        textTransform: "uppercase",
+      }}
+    >
+      <Typography
+        variant="h4"
         sx={{
-          display: "flex",
-          alignItems: "center",
-          minHeight: 50,
+          textAlign: "center",
           width: "100%",
-          pl: 2,
-          bgcolor: theme.palette.primary.main,
-          color: theme.palette.primary.contrastText,
+          mx: 2,
           textTransform: "uppercase",
+          fontWeight: "bold",
         }}
       >
-         {coreValues.map((value) => (
-              <List key={value}>
-                <ListItem>
-                  <ListItemIcon>
-                    <StarIcon />
-                  </ListItemIcon>
-                  <ListItemText inset primary={value} />
-                </ListItem>
-              </List>
-            ))}
-        
-      </Paper>
+        Core Values
+      </Typography>
+      <Grid
+        container
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+        }}
+      >
+        <Grid item>
+          {coreValues.slice(0, 3).map((value) => (
+            <List key={value}>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon
+                    sx={{
+                      color: theme.palette.secondary.light,
+                    }}
+                  />
+                </ListItemIcon>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: theme.palette.secondary.main,
+                  }}
+                >
+                  {value}
+                </Typography>
+              </ListItem>
+            </List>
+          ))}
+        </Grid>
+        <Grid item>
+          {coreValues.slice(3, 6).map((value) => (
+            <List key={value}>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon
+                    sx={{
+                      color: theme.palette.secondary.light,
+                    }}
+                  />
+                </ListItemIcon>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: theme.palette.secondary.main,
+                  }}
+                >
+                  {value}
+                </Typography>
+              </ListItem>
+            </List>
+          ))}
+        </Grid>
+      </Grid>
     </Box>
   );
 }

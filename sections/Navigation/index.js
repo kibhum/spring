@@ -29,7 +29,16 @@ export default function Navigation() {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box
+      sx={{
+        width: 250,
+        height: "100%",
+        backgroundColor: theme.palette.secondary.dark,
+        color: theme.palette.primary.main,
+      }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+    >
       <List>
         {[
           { name: "Home", url: "/", icon: <HomeIcon /> },
@@ -45,7 +54,7 @@ export default function Navigation() {
             <ListItem key={item.name} disablePadding>
               <ListItemButton>
                 <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.name} />
+                <ListItemText secondary={item.name} />
               </ListItemButton>
             </ListItem>
           </NavLink>

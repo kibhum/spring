@@ -42,14 +42,19 @@ export default function Slider() {
 
   return (
     <Box sx={{ width: "100%", flexGrow: 1 }} id="#programmes">
-      <Typography variant="h4" sx={{
-        width: "100%",
-        backgroundColor:theme.palette.primary.contrastText,
-        color: theme.palette.primary.dark,
-        textTransform: "uppercase",
-        textAlign: "center",
-        p:2
-      }}>Programmes offered </Typography>
+      <Typography
+        variant="h4"
+        sx={{
+          width: "100%",
+          backgroundColor: theme.palette.secondary.contrastText,
+          color: theme.palette.primary.dark,
+          textTransform: "uppercase",
+          textAlign: "center",
+          p: 2,
+        }}
+      >
+        Programmes offered{" "}
+      </Typography>
       <Paper
         square
         elevation={1}
@@ -59,12 +64,12 @@ export default function Slider() {
           minHeight: 50,
           width: "100%",
           pl: 2,
-          bgcolor: theme.palette.primary.main,
-          color: theme.palette.primary.contrastText,
+          backgroundColor: theme.palette.secondary.contrastText,
+          color: theme.palette.primary.main,
         }}
       >
         <Typography
-        variant="h5"
+          variant="h5"
           sx={{
             textAlign: "center",
             width: "100%",
@@ -81,8 +86,8 @@ export default function Slider() {
         sx={{
           width: "100%",
           p: 2,
-          bgcolor: theme.palette.primary.contrastText,
-          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.secondary.contrastText,
+          color: theme.palette.secondary.light,
         }}
       >
         <Grid
@@ -96,7 +101,7 @@ export default function Slider() {
         >
           <Grid item>
             <Typography
-            variant="h4"
+              variant="h4"
               sx={{
                 textAlign: "center",
                 width: "100%",
@@ -111,18 +116,29 @@ export default function Slider() {
               <List key={requirement}>
                 <ListItem>
                   <ListItemIcon>
-                    <StarIcon />
+                    <StarIcon
+                      sx={{
+                        color: theme.palette.secondary.light,
+                      }}
+                    />
                   </ListItemIcon>
-                  <ListItemText inset primary={requirement} />
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: theme.palette.secondary.main,
+                    }}
+                  >
+                    {requirement}
+                  </Typography>
                 </ListItem>
               </List>
             ))}
           </Grid>
           <Grid item>
             <Typography
-            variant="h4"
+              variant="h4"
               sx={{
-                alignItems:"center",
+                alignItems: "center",
                 width: "100%",
                 mx: 2,
                 textTransform: "uppercase",
@@ -134,9 +150,20 @@ export default function Slider() {
             <List key={programmes[activeStep].duration}>
               <ListItem>
                 <ListItemIcon>
-                  <StarIcon />
+                  <StarIcon
+                    sx={{
+                      color: theme.palette.primary.light,
+                    }}
+                  />
                 </ListItemIcon>
-                <ListItemText inset primary={programmes[activeStep].duration} />
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: theme.palette.primary.light,
+                  }}
+                >
+                  {programmes[activeStep].duration}
+                </Typography>
               </ListItem>
             </List>
           </Grid>
@@ -148,15 +175,14 @@ export default function Slider() {
         position="static"
         activeStep={activeStep}
         sx={{
-          bgcolor: theme.palette.primary.contrastText,
-          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.secondary.contrastText,
+          color: theme.palette.secondary.main,
         }}
         nextButton={
           <Button
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
-
           >
             Next Course
             {theme.direction === "rtl" ? (

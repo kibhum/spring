@@ -1,11 +1,10 @@
-"use client"
-import React from 'react';
-import Typography from '@mui/material/Typography';
+"use client";
+import React from "react";
+import Typography from "@mui/material/Typography";
 
-const TypographyWithShadow = ({ children, color,sx,...props }) => {
-
+const TypographyWithShadow = ({ children, color, sx, ...props }) => {
   return (
-    <Typography variant="h3"  {...props}>
+    <Typography variant="h3" {...props}>
       {children}
     </Typography>
   );

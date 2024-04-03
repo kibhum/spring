@@ -17,15 +17,15 @@ const History = () => {
   return (
     <Box sx={{ width: "100%", flexGrow: 1 }}>
       <Typography
-      variant="h4"
+        variant="h4"
         sx={{
           textAlign: "center",
           width: "100%",
           textTransform: "uppercase",
-            width: "100%",
-            p: 2,
-            bgcolor: theme.palette.primary.contrastText,
-            color: theme.palette.primary.main,
+          width: "100%",
+          p: 2,
+          bgcolor: theme.palette.secondary.contrastText,
+          color: theme.palette.secondary.main,
         }}
       >
         History
@@ -48,8 +48,8 @@ const History = () => {
             minHeight: 50,
             width: "100%",
             pl: 2,
-            bgcolor: theme.palette.primary.dark,
-            color: theme.palette.primary.contrastText,
+            bgcolor: theme.palette.secondary.dark,
+            color: theme.palette.secondary.contrastText,
             textTransform: "uppercase",
           }}
         >
@@ -60,7 +60,7 @@ const History = () => {
               </ListItemIcon>
               <ListItemText
                 inset
-                primary="It was started in the year 2021 by Dottie Rose foundation"
+                secondary="It was started in the year 2021 by Dottie Rose foundation"
               />
             </ListItem>
           </List>
@@ -71,7 +71,7 @@ const History = () => {
               </ListItemIcon>
               <ListItemText
                 inset
-                primary="Originally, it was to mentor young girls who had either dropped out of school or had  completed school but didn't continue studying"
+                secondary="Originally, it was to mentor young girls who had either dropped out of school or had  completed school but didn't continue studying"
               />
             </ListItem>
           </List>
@@ -82,7 +82,7 @@ const History = () => {
               </ListItemIcon>
               <ListItemText
                 inset
-                primary="In the year 2023, it turned into a school to benefit both boys and girls."
+                secondary="In the year 2023, it turned into a school to benefit both boys and girls."
               />
             </ListItem>
           </List>
