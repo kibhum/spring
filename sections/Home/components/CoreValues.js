@@ -71,7 +71,7 @@ export default function CoreValues() {
                 <Typography
                   variant="h5"
                   sx={{
-                    color: theme.palette.secondary.main,
+                    color: theme.palette.secondary.light,
                   }}
                 >
                   {value}
@@ -94,7 +94,7 @@ export default function CoreValues() {
                 <Typography
                   variant="h5"
                   sx={{
-                    color: theme.palette.secondary.main,
+                    color: theme.palette.secondary.light,
                   }}
                 >
                   {value}

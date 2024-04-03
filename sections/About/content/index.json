@@ -1,6 +1,6 @@
 [
   {
-    "title": "Reverend",
+    "title": "Reverend Leonard Suswa",
     "path": "/Assets/gallery/pastor.jpg",
     "description": "He was advising students on life matters and the importance of putting God first on their prayer day."
   },
@@ -10,9 +10,9 @@
     "description": "She was guiding the students on the life choices and also the importance of working hard. This was during the prayer day."
   },
   {
-    "title": "Principal",
+    "title": "Principal Beatrice Sang",
     "path": "../Assets/gallery/principal.jpg",
-    "description": "Meet our principal. She has always advised the students in all aspects of life. She has always been there for them."
+    "description": "Meet our principal. She has always advised the students in all aspects of life."
   },
   {
     "title": "Students",
@@ -22,6 +22,6 @@
   {
     "title": "Teachers",
     "path": "/Assets/gallery/teachers.jpg",
-    "description": "These are the teachers who have always been there for the students."
+    "description": "These are some of the teachers involved in day to day activities with the students"
   }
 ]

@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Box>
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           textTransform: "uppercase",
           textAlign: "center",

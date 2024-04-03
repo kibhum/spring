@@ -15,13 +15,12 @@ const About = () => {
       id="#about"
     >
       <Typography
-        variant="h4"
+        variant="h5"
         sx={{
           width: "100%",
           bgcolor: theme.palette.secondary.contrastText,
           color: theme.palette.secondary.light,
           textTransform: "uppercase",
-          // textShadow: `2px 2px 4px ${theme.palette.secondary.dark}`,
           textAlign: "center",
         }}
       >

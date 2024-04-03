@@ -43,14 +43,14 @@ export default function Slider() {
   return (
     <Box sx={{ width: "100%", flexGrow: 1 }} id="#programmes">
       <Typography
-        variant="h4"
+        variant="h5"
         sx={{
           width: "100%",
           backgroundColor: theme.palette.secondary.contrastText,
-          color: theme.palette.primary.dark,
+          color: theme.palette.primary.main,
           textTransform: "uppercase",
           textAlign: "center",
-          p: 2,
+          // p: 2,
         }}
       >
         Programmes offered{" "}
@@ -69,7 +69,7 @@ export default function Slider() {
         }}
       >
         <Typography
-          variant="h5"
+          variant="h6"
           sx={{
             textAlign: "center",
             width: "100%",
@@ -95,13 +95,13 @@ export default function Slider() {
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-around",
-            p: 2,
+            justifyContent: "space-between",
+            p: 4,
           }}
         >
           <Grid item>
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{
                 textAlign: "center",
                 width: "100%",
@@ -136,7 +136,7 @@ export default function Slider() {
           </Grid>
           <Grid item>
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{
                 alignItems: "center",
                 width: "100%",
