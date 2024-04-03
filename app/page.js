@@ -1,13 +1,13 @@
-import Home from "@/sections/Programmes";
-import About from "@/sections/About";
 import React from "react";
-import { Divider } from "@mui/material/Divider";
+import Programmes from "@/sections/Programmes";
+import Home from "@/sections/Home";
+import About from "@/sections/About";
 
 export default function HomePage() {
   return (
     <React.Fragment>
       <Home />
-      {/* <Divider /> */}
+      <Programmes />
       <About />
     </React.Fragment>
   );

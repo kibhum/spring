@@ -42,6 +42,14 @@ export default function Slider() {
 
   return (
     <Box sx={{ width: "100%", flexGrow: 1 }} id="#programmes">
+      <Typography variant="h4" sx={{
+        width: "100%",
+        backgroundColor:theme.palette.primary.contrastText,
+        color: theme.palette.primary.dark,
+        textTransform: "uppercase",
+        textAlign: "center",
+        p:2
+      }}>Programmes offered </Typography>
       <Paper
         square
         elevation={1}
@@ -51,11 +59,12 @@ export default function Slider() {
           minHeight: 50,
           width: "100%",
           pl: 2,
-          bgcolor: theme.palette.primary.dark,
+          bgcolor: theme.palette.primary.main,
           color: theme.palette.primary.contrastText,
         }}
       >
         <Typography
+        variant="h5"
           sx={{
             textAlign: "center",
             width: "100%",
@@ -64,7 +73,7 @@ export default function Slider() {
         >
           {programmes[activeStep].label}
         </Typography>
-        <Typography sx={{ textAlign: "center", width: "100%" }}>
+        <Typography variant="h5" sx={{ textAlign: "center", width: "100%" }}>
           Cost: {programmes[activeStep].cost}
         </Typography>
       </Paper>
@@ -72,8 +81,8 @@ export default function Slider() {
         sx={{
           width: "100%",
           p: 2,
-          // bgcolor: theme.palette.secondary.main,
-          // color: theme.palette.secondary.contrastText,
+          bgcolor: theme.palette.primary.contrastText,
+          color: theme.palette.primary.main,
         }}
       >
         <Grid
@@ -87,6 +96,7 @@ export default function Slider() {
         >
           <Grid item>
             <Typography
+            variant="h4"
               sx={{
                 textAlign: "center",
                 width: "100%",
@@ -110,8 +120,9 @@ export default function Slider() {
           </Grid>
           <Grid item>
             <Typography
+            variant="h4"
               sx={{
-                textAlign: "center",
+                alignItems:"center",
                 width: "100%",
                 mx: 2,
                 textTransform: "uppercase",
@@ -132,17 +143,22 @@ export default function Slider() {
         </Grid>
       </Box>
       <MobileStepper
-        variant="text"
+        variant="dots"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
+        sx={{
+          bgcolor: theme.palette.primary.contrastText,
+          color: theme.palette.primary.main,
+        }}
         nextButton={
           <Button
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
+
           >
-            Next
+            Next Course
             {theme.direction === "rtl" ? (
               <KeyboardArrowLeft />
             ) : (
@@ -157,7 +173,7 @@ export default function Slider() {
             ) : (
               <KeyboardArrowLeft />
             )}
-            Back
+            Previous Course
           </Button>
         }
       />

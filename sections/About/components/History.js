@@ -17,10 +17,15 @@ const History = () => {
   return (
     <Box sx={{ width: "100%", flexGrow: 1 }}>
       <Typography
+      variant="h4"
         sx={{
           textAlign: "center",
           width: "100%",
           textTransform: "uppercase",
+            width: "100%",
+            p: 2,
+            bgcolor: theme.palette.primary.contrastText,
+            color: theme.palette.primary.main,
         }}
       >
         History
@@ -34,16 +39,12 @@ const History = () => {
           minHeight: 50,
           width: "100%",
           pl: 2,
-          bgcolor: theme.palette.primary.dark,
-          color: theme.palette.primary.contrastText,
         }}
       >
         <Paper
           square
           elevation={2}
           sx={{
-            // display: "flex",
-            // alignItems: "center",
             minHeight: 50,
             width: "100%",
             pl: 2,

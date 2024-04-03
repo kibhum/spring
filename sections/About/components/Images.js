@@ -8,17 +8,17 @@ import Typography from "@mui/material/Typography";
 
 export default function ImageCard({ path, title, description }) {
   return (
-    <Card>
+    <Card sx={{width:"100%"}}>
       <CardMedia
-        sx={{ height: 500, objectFit: "contain" }}
+        sx={{ height: 500, objectFit: "cover" ,p:2}}
         image={path}
         title={title}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography  variant="h3"  sx={{width:"100%", textAlign:"center",textTransform:"uppercase"}}>
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="h6" sx={{width:"100%", textAlign:"center", textTransform:"uppercase"}}>
           {description}
         </Typography>
       </CardContent>

@@ -3,10 +3,13 @@ import React from "react";
 import Slider from "react-slick";
 import ImageCard from "./Images";
 import { getImages } from "../content/fetcher";
-import Box from "@mui/material/Box";
+import Container from '@mui/material/Container';
+import { useTheme } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 const images = getImages();
 
 export default function Gallery() {
+  const theme = useTheme();
   const settings = {
     dots: true,
     infinite: true,
@@ -15,7 +18,14 @@ export default function Gallery() {
     slidesToScroll: 1,
   };
   return (
-    <Box sx={{ width: "100%" }}>
+    <Container sx={{ maxWidth: "100%" }}>
+      <Typography variant="h4" sx={{
+        width: "100%",
+        color: theme.palette.primary.light,
+        textTransform: "uppercase",
+        textAlign: "center",
+        p:2
+      }}>Get to know the spring of hope team </Typography>
       <Slider {...settings}>
         {images.map((image) => (
           <ImageCard
@@ -26,6 +36,6 @@ export default function Gallery() {
           />
         ))}
       </Slider>
-    </Box>
+    </Container>
   );
 }
